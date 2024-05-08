@@ -1,0 +1,6 @@
+﻿n.nombre,n.consola,n.estudio,n.categoría,n.multijugador,n.duración,n.precio
+"""Red Dead Redemption 2""","""Play Station""","""Rockstar Games""","""Accion""",true,65,59.99
+"""EA Sports FC 24""","""Play Station""","""EA Sports""","""Videojuegos de futbol""",true,75,69.99
+"""Super Mario Odyssey""","""Nintendo Switch""","""Nintendo""","""Plataformas""",false,15,59.99
+"""The Witcher 3: Wild Hunt""","""PlayStation 4""","""CD Projekt Red""","""Rol""",false,100,49.99
+"""Overwatch""","""Xbox One""","""Blizzard Entertainment""","""Disparos en primera persona""",true,0,39.99
