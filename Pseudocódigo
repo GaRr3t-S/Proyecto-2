@@ -1,0 +1,59 @@
+// Pseudocódigo para un sistema de recomendación de videojuegos usando k-NN
+
+// Paso 1: Definir la estructura de datos para los videojuegos y usuarios
+estructura Videojuego {
+    consola: cadena
+    estudio: cadena
+    categoría: cadena
+    multijugador: booleano
+    duración: entero // en horas
+    precio: flotante
+}
+
+estructura Usuario {
+    id: entero
+    videojuegos_jugados: lista de Videojuego
+}
+
+// Paso 2: Cargar los datos en la base de datos basada en grafos
+función cargarDatos() {
+    // Cargar datos de videojuegos y usuarios en la base de datos
+}
+
+// Paso 3: Calcular la distancia entre dos videojuegos
+función calcularDistancia(videojuego1, videojuego2) {
+    // Implementar una función de distancia adecuada, por ejemplo, distancia euclidiana
+    distancia = 0
+    // Agregar lógica para calcular la distancia basada en las características
+    return distancia
+}
+
+// Paso 4: Encontrar los k videojuegos más cercanos
+función kVecinosCercanos(usuario, k) {
+    distancias = []
+    para cada videojuego en la base de datos {
+        si videojuego no está en usuario.videojuegos_jugados {
+            distancia = calcularDistancia(usuario, videojuego)
+            distancias.añadir((videojuego, distancia))
+        }
+    }
+    // Ordenar la lista de distancias de menor a mayor
+    distancias.ordenar_por_segundo_elemento()
+    // Devolver los k primeros elementos de la lista de distancias
+    return distancias[:k]
+}
+
+// Paso 5: Hacer una recomendación
+función recomendarVideojuegos(usuario, k) {
+    vecinos = kVecinosCercanos(usuario, k)
+    recomendaciones = []
+    para cada (videojuego, distancia) en vecinos {
+        recomendaciones.añadir(videojuego)
+    }
+    return recomendaciones
+}
+
+// Paso 6: Ejecutar el sistema de recomendación
+usuario_actual = obtenerUsuarioActual()
+recomendaciones = recomendarVideojuegos(usuario_actual, 5)
+mostrarRecomendaciones(recomendaciones)
